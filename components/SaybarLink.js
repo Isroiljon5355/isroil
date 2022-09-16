@@ -10,7 +10,7 @@ function SaybarLink(props) {
 				background: props.darkmodes ? '#fff' : '#1f2937',
 				color: props.darkmodes ? '#302e4d' : '#fff',
 			}}
-			className=" w-[250px] h-screen  border-r-2 border-solid border-[#444] transition duration-1000 px-5"
+			className=" w-[250px] h-screen hidden lg:block invisible lg:visible  border-r-2 border-solid border-[#444] transition duration-1000 px-5"
 		>
 			<div className="grid grid-cols-1 justify-center content-evenly h-screen">
 				<div className=" cursor-pointer">

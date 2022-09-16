@@ -11,7 +11,7 @@ function SaydBar(props) {
 				onClick={() => setOpen(!open)}
 			>
 				<div className="w-12 h-10 flex  justify-center items-center shadow-2xl bg-[#374151] text-white ml-2 rounded-sm">
-					<Hamburger direction="right" size={20} color="wihte" />
+					<Hamburger direction="right" size={20} color="#fff" />
 				</div>
 			</div>
 		</div>
