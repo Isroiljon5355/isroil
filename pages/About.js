@@ -2,7 +2,7 @@ import React from 'react';
 
 function About() {
 	return (
-		<div className=" container m-auto lg:px-20 lg:py-20 border-2 border-solid border-white ">
+		<div className=" container m-auto mt-16 lg:px-20 lg:py-20 border-2 border-solid border-white ">
 			<div>
 				<div>
 					<h2 className="text-3xl font-bold">About me</h2>
@@ -22,6 +22,7 @@ function About() {
 						can create all sorts of <span className="text-blue-400">HTML</span>{' '}
 						layouts and <span className="text-blue-400">ReactJS </span>SPA.{' '}
 					</p>
+					<h1>salom</h1>
 				</div>
 				<div>
 					<div>

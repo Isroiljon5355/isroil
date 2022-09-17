@@ -11,7 +11,7 @@ function MyApp({ Component, pageProps }) {
 				background: dakMode ? '#f2f2fc' : '#111827',
 				color: dakMode ? '#302e4d' : '#fff',
 			}}
-			className="transition-colors"
+			className="transition-colors h-screen"
 		>
 			<Navbar toggle={() => setDakMode(!dakMode)} dakMode={dakMode} />
 			<div className="flex">

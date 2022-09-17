@@ -5,9 +5,11 @@ function SaydBar(props) {
 	const [open, setOpen] = useState(false);
 	return (
 		<div className=" flex">
-			<div>{open ? '' : <SaybarLink darkmodes={props.dakMode} />}</div>
+			<div>
+				{open ? '' : <SaybarLink darkmodes={props.dakMode} open={open} />}
+			</div>
 			<div
-				className=" mt-3 visible lg:hidden block md:invisible"
+				className=" mt-3 visible lg:invisible z-50"
 				onClick={() => setOpen(!open)}
 			>
 				<div className="w-12 h-10 flex  justify-center items-center shadow-2xl bg-[#374151] text-white ml-2 rounded-sm">
