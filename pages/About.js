@@ -22,11 +22,12 @@ function About() {
 						can create all sorts of <span className="text-blue-400">HTML</span>{' '}
 						layouts and <span className="text-blue-400">ReactJS </span>SPA.{' '}
 					</p>
-					<p>salom hamaga</p>
 				</div>
 				<div>
 					<div>
-						<div></div>
+						<div>
+							<h3>lorerkeflgn frenkdl,qqrefakfdl</h3>
+						</div>
 					</div>
 				</div>
 			</div>
