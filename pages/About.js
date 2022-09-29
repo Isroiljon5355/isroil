@@ -25,9 +25,11 @@ function About() {
 				</div>
 				<div>
 					<div>
-						<div>
-							<h3>lorerkeflgn frenkdl,qqrefakfdl</h3>
-						</div>
+						<table>
+							<th>
+								<td>salom</td>
+							</th>
+						</table>
 					</div>
 				</div>
 			</div>
