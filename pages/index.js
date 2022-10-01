@@ -1,9 +1,7 @@
-import HomeInfo from '../components/pages/HomeInfo';
-import About from './About';
-export default function Home() {
-	return (
-		<div>
-			<HomeInfo />
-		</div>
-	);
+import React from "react";
+
+function index() {
+	return <div>index</div>;
 }
+
+export default index;
