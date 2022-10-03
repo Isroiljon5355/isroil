@@ -10,10 +10,13 @@ import {
 	Burger,
 	useMantineTheme,
 } from "@mantine/core";
+import Home from "./pages/Home";
+import NavLinks from "./navbar/NavLinks";
 
 export default function AppShellDemo() {
 	const theme = useMantineTheme();
 	const [opened, setOpened] = useState(false);
+
 	return (
 		<AppShell
 			styles={{
@@ -27,26 +30,12 @@ export default function AppShellDemo() {
 			navbarOffsetBreakpoint="sm"
 			asideOffsetBreakpoint="sm"
 			navbar={
-				<Navbar
-					p="md"
-					hiddenBreakpoint="sm"
-					hidden={!opened}
-					width={{ sm: 200, lg: 300 }}
-				>
-					<Text>Application navbar</Text>
+				<Navbar p="xs" width={{ base: 300 }}>
+					<Navbar.Section grow mt="md">
+						<NavLinks />
+					</Navbar.Section>
+					<Navbar.Section>salom</Navbar.Section>
 				</Navbar>
-			}
-			aside={
-				<MediaQuery smallerThan="sm" styles={{ display: "none" }}>
-					<Aside p="md" hiddenBreakpoint="sm" width={{ sm: 200, lg: 300 }}>
-						<Text>Application sidebar</Text>
-					</Aside>
-				</MediaQuery>
-			}
-			footer={
-				<Footer height={60} p="md">
-					Application footer
-				</Footer>
 			}
 			header={
 				<Header height={70} p="md">
@@ -63,12 +52,12 @@ export default function AppShellDemo() {
 							/>
 						</MediaQuery>
 
-						<Text>Application header</Text>
+						<Text>ljdkscx,</Text>
 					</div>
 				</Header>
 			}
 		>
-			<Text>Resize app to see responsive navbar in action</Text>
+			<Home />
 		</AppShell>
 	);
 }
