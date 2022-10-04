@@ -5,7 +5,7 @@ function Home() {
 		<Box
 			style={{
 				border: "1px solid red",
-				height: "85vh",
+				// height: "85vh",
 				display: "flex",
 				justifyContent: "center",
 				alignContent: "center",

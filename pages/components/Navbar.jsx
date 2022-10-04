@@ -11,53 +11,61 @@ import {
 	useMantineTheme,
 } from "@mantine/core";
 import Home from "./pages/Home";
-import NavLinks from "./navbar/NavLinks";
 
 export default function AppShellDemo() {
 	const theme = useMantineTheme();
 	const [opened, setOpened] = useState(false);
-
 	return (
-		<AppShell
-			styles={{
-				main: {
-					background:
-						theme.colorScheme === "dark"
-							? theme.colors.dark[8]
-							: theme.colors.gray[0],
-				},
-			}}
-			navbarOffsetBreakpoint="sm"
-			asideOffsetBreakpoint="sm"
-			navbar={
-				<Navbar p="xs" width={{ base: 300 }}>
-					<Navbar.Section grow mt="md">
-						<NavLinks />
-					</Navbar.Section>
-					<Navbar.Section>salom</Navbar.Section>
-				</Navbar>
-			}
-			header={
-				<Header height={70} p="md">
-					<div
-						style={{ display: "flex", alignItems: "center", height: "100%" }}
+		<>
+			<AppShell
+				styles={{
+					main: {
+						background:
+							theme.colorScheme === "dark"
+								? theme.colors.dark[8]
+								: theme.colors.gray[0],
+					},
+				}}
+				navbarOffsetBreakpoint="sm"
+				asideOffsetBreakpoint="sm"
+				navbar={
+					<Navbar
+						p="md"
+						hiddenBreakpoint="sm"
+						hidden={!opened}
+						width={{ sm: 200, lg: 300 }}
 					>
-						<MediaQuery largerThan="sm" styles={{ display: "none" }}>
-							<Burger
-								opened={opened}
-								onClick={() => setOpened((o) => !o)}
-								size="sm"
-								color={theme.colors.gray[6]}
-								mr="xl"
-							/>
-						</MediaQuery>
+						<Text>Application navbar</Text>
+					</Navbar>
+				}
+				footer={
+					<Footer height={60} p="md">
+						Application footer
+					</Footer>
+				}
+				header={
+					<Header height={70} p="md">
+						<div
+							style={{ display: "flex", alignItems: "center", height: "100%" }}
+						>
+							<MediaQuery largerThan="sm" styles={{ display: "none" }}>
+								<Burger
+									opened={opened}
+									onClick={() => setOpened((o) => !o)}
+									size="sm"
+									color={theme.colors.gray[6]}
+									mr="xl"
+								/>
+							</MediaQuery>
 
-						<Text>ljdkscx,</Text>
-					</div>
-				</Header>
-			}
-		>
-			<Home />
-		</AppShell>
+							<Text>Application header</Text>
+						</div>
+					</Header>
+				}
+			>
+				<Home />
+				<Text>Resize app to see responsive navbar in action</Text>
+			</AppShell>
+		</>
 	);
 }
