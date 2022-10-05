@@ -9,6 +9,7 @@ import {
 	MediaQuery,
 	Burger,
 	useMantineTheme,
+	Button,
 } from "@mantine/core";
 import Home from "./pages/Home";
 
@@ -36,6 +37,7 @@ export default function AppShellDemo() {
 						width={{ sm: 200, lg: 300 }}
 					>
 						<Text>Application navbar</Text>
+						<Button>Add click</Button>
 					</Navbar>
 				}
 				footer={
