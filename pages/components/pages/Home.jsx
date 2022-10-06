@@ -1,5 +1,6 @@
 import React from "react";
 import { Box, Image, Text } from "@mantine/core";
+import Icon from "./home/Icon";
 function Home() {
 	return (
 		<Box
@@ -32,6 +33,7 @@ function Home() {
 				>
 					Musajonov Isroiljon
 				</Text>
+
 				<Text
 					style={{
 						textAlign: "center",
@@ -42,6 +44,7 @@ function Home() {
 				>
 					I am a frontend developer
 				</Text>
+				<Icon />
 			</Box>
 		</Box>
 	);
