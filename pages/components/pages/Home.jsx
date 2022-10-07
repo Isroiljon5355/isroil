@@ -45,12 +45,9 @@ function Home() {
 				>
 					I am a frontend developer
 				</Text>
-
-
-
-				
 				<Icon />
 			</Box>
+			<Text>djlsnjl,cnkwls</Text>
 		</Box>
 	);
 }

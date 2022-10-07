@@ -11,13 +11,15 @@
 	"dependencies": {
 		"@emotion/react": "^11.10.4",
 		"@mantine/core": "^5.5.0",
-		"@mantine/hooks": "^5.5.0",
+		"@mantine/hooks": "^5.5.4",
 		"@react-icons/all-files": "^4.1.0",
+		"cookies-next": "^2.1.1",
 		"hamburger-react": "^2.5.0",
 		"next": "12.3.0",
 		"react": "18.2.0",
 		"react-dom": "18.2.0",
-		"react-icons": "^4.4.0"
+		"react-icons": "^4.4.0",
+		"tabler-icons-react": "^1.55.0"
 	},
 	"devDependencies": {
 		"autoprefixer": "^10.4.8",

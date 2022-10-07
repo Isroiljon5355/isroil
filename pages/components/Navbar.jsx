@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState } from 'react'
 import {
 	AppShell,
 	Navbar,
@@ -10,19 +10,19 @@ import {
 	Burger,
 	useMantineTheme,
 	Button,
-} from "@mantine/core";
-import Home from "./pages/Home";
-
+} from '@mantine/core'
+import Home from './pages/Home'
+import { ColorModeSwitcher } from './ColorModeSwitcher'
 export default function AppShellDemo() {
-	const theme = useMantineTheme();
-	const [opened, setOpened] = useState(false);
+	const theme = useMantineTheme()
+	const [opened, setOpened] = useState(false)
 	return (
 		<>
 			<AppShell
 				styles={{
 					main: {
 						background:
-							theme.colorScheme === "dark"
+							theme.colorScheme === 'dark'
 								? theme.colors.dark[8]
 								: theme.colors.gray[0],
 					},
@@ -40,17 +40,12 @@ export default function AppShellDemo() {
 						<Button>Add click</Button>
 					</Navbar>
 				}
-				// footer={
-				// 	<Footer height={60} p="md">
-				// 		Application footer
-				// 	</Footer>
-				// }
 				header={
 					<Header height={70} p="md">
 						<div
-							style={{ display: "flex", alignItems: "center", height: "100%" }}
+							style={{ display: 'flex', alignItems: 'center', height: '100%' }}
 						>
-							<MediaQuery largerThan="sm" styles={{ display: "none" }}>
+							<MediaQuery largerThan="sm" styles={{ display: 'none' }}>
 								<Burger
 									opened={opened}
 									onClick={() => setOpened((o) => !o)}
@@ -60,7 +55,7 @@ export default function AppShellDemo() {
 								/>
 							</MediaQuery>
 
-							<Text>Application header</Text>
+							<ColorModeSwitcher />
 						</div>
 					</Header>
 				}
@@ -69,5 +64,5 @@ export default function AppShellDemo() {
 				<Text>Resize app to see responsive navbar in action</Text>
 			</AppShell>
 		</>
-	);
+	)
 }
