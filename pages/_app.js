@@ -1,15 +1,14 @@
-import '../styles/globals.css'
-import { MantineProvider, ColorSchemeProvider } from '@mantine/core'
-import { useColorScheme } from '@mantine/hooks'
-import { getCookies, setCookie, setCookies } from 'cookies-next'
-import { useState } from 'react'
+import "../styles/globals.css"
+import { MantineProvider, ColorSchemeProvider } from "@mantine/core"
+import { setCookies } from "cookies-next"
+import { useState } from "react"
 export default function MyApp(props) {
 	const { Component, pageProps } = props
 	const [colorScheme, setColorScheme] = useState(props.colorScheme)
 	const toggleColorScheme = (value) => {
-		const nextColorScheme = value || (colorScheme === 'dark' ? 'light' : 'dark')
+		const nextColorScheme = value || (colorScheme === "dark" ? "light" : "dark")
 		setColorScheme(nextColorScheme)
-		setCookies('mantine-color-scheme', nextColorScheme, {
+		setCookies("mantine-color-scheme", nextColorScheme, {
 			maxAge: 60 * 60 * 24 * 30,
 		})
 	}
@@ -30,6 +29,7 @@ export default function MyApp(props) {
 		</>
 	)
 }
-// MyApp.getInitialProps = ({ ctx }) => {
-// 	colorScheme: getCookies('mantine-color-scheme', ctx) || 'n '
+// export default App
+// MyApp.getInitialProps = (ctx) => {
+// 	colorScheme: getCookies("mantine-color-scheme", ctx) || "n "
 // }
