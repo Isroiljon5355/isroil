@@ -1,4 +1,5 @@
-import React from "react";
+import { Text } from "@mantine/core"
+import React from "react"
 
 function Icon() {
 	return (
@@ -6,8 +7,9 @@ function Icon() {
 			<a href="https://www.flaticon.com/free-icons/github" title="github icons">
 				Github icons created by riajulislam - Flaticon
 			</a>
+			<Text>Icon cards</Text>
 		</div>
-	);
+	)
 }
 
-export default Icon;
+export default Icon
