@@ -1,8 +1,11 @@
 import React from "react"
-import AppShellDemo from "../../components/navbar/Navbar"
+import Layouts from "../../layouts/Layouts"
 function About() {
 	return <div>about</div>
 }
 
 export default About
-Contact.getLayout = (page) => <AppShellDemo>{page}</AppShellDemo>
+About.getLayout = function getLayout(page) {
+	return <Layouts>{page}</Layouts>
+}
+// Contact.getLayout = (page) => <AppShellDemo>{page}</AppShellDemo>

@@ -1,6 +1,7 @@
 import React from "react"
 import { Box, Image, Text } from "@mantine/core"
 import Icon from "./Icon"
+import Layouts from "../../layouts/Layouts"
 function Home() {
 	return (
 		<Box
@@ -51,3 +52,6 @@ function Home() {
 }
 
 export default Home
+Home.getLayout = function getLayout(page) {
+	return <Layouts>{page}</Layouts>
+}

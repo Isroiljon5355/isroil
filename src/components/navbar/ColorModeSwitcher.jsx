@@ -1,6 +1,6 @@
 import React from "react"
 import { ActionIcon, Group, useMantineColorScheme } from "@mantine/core"
-import { IconName, FiSun } from "react-icons/fi"
+// import { IconName, FiSun } from "react-icons/fi"
 import { IconMoon, IconSun, IconSunMoon } from "@tabler/icons"
 export function ColorModeSwitcher() {
 	const { colorScheme, toggleColorScheme } = useMantineColorScheme()
