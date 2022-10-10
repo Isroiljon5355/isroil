@@ -1,10 +1,11 @@
 import React from "react"
 import { ActionIcon, Group, useMantineColorScheme } from "@mantine/core"
 import { IconName, FiSun } from "react-icons/fi"
+import { IconMoon, IconSun, IconSunMoon } from "@tabler/icons"
 export function ColorModeSwitcher() {
 	const { colorScheme, toggleColorScheme } = useMantineColorScheme()
 	return (
-		<Group position="center" mt="xl">
+		<Group position="center">
 			<ActionIcon
 				onClick={() => toggleColorScheme()}
 				size="xl"
@@ -19,24 +20,7 @@ export function ColorModeSwitcher() {
 							: theme.colors.blue[6],
 				})}
 			>
-				{colorScheme === "dark" ? (
-					<FiSun size={20} />
-				) : (
-					<svg
-						xmlns="http://www.w3.org/2000/svg"
-						fill="none"
-						viewBox="0 0 24 24"
-						strokeWidth={1.5}
-						stroke="currentColor"
-						className="w-6 h-6"
-					>
-						<path
-							strokeLinecap="round"
-							strokeLinejoin="round"
-							d="M6 13.5V3.75m0 9.75a1.5 1.5 0 010 3m0-3a1.5 1.5 0 000 3m0 3.75V16.5m12-3V3.75m0 9.75a1.5 1.5 0 010 3m0-3a1.5 1.5 0 000 3m0 3.75V16.5m-6-9V3.75m0 3.75a1.5 1.5 0 010 3m0-3a1.5 1.5 0 000 3m0 9.75V10.5"
-						/>
-					</svg>
-				)}
+				{colorScheme === "dark" ? <IconSun size={24} /> : <IconMoon size={24} />}
 			</ActionIcon>
 		</Group>
 	)

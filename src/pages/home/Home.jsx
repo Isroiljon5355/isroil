@@ -1,15 +1,15 @@
 import React from "react"
 import { Box, Image, Text } from "@mantine/core"
-import Icon from "./home/Icon"
+import Icon from "./Icon"
 function Home() {
 	return (
 		<Box
 			style={{
-				border: "1px solid red",
-				// height: "85vh",
+				height: "85vh",
 				display: "flex",
-				justifyContent: "center",
 				alignContent: "center",
+				justifyContent: "center",
+				paddingTop: "100px",
 			}}
 		>
 			<Box>
@@ -28,7 +28,7 @@ function Home() {
 						textAlign: "center",
 						fontSize: "37px",
 						fontWeight: "700",
-						marginTop: "15px",
+						marginTop: "20px",
 					}}
 				>
 					Musajonov Isroiljon
@@ -39,7 +39,7 @@ function Home() {
 						textAlign: "center",
 						fontSize: "27px",
 						fontWeight: "500",
-						marginTop: "-5px",
+						marginTop: "-7px",
 					}}
 				>
 					I am a frontend developer

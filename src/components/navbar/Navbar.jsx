@@ -3,17 +3,15 @@ import {
 	AppShell,
 	Navbar,
 	Header,
-	// Footer,
-	// Aside,
-	Text,
 	MediaQuery,
 	Burger,
 	useMantineTheme,
-	Button,
+	Box,
 } from "@mantine/core"
-import Home from "./pages/Home"
+import Home from "../../pages/home/Home"
 import { ColorModeSwitcher } from "./ColorModeSwitcher"
-export default function AppShellDemo() {
+import NavbarLinks from "./NavbarLinks"
+function AppShellDemo() {
 	const theme = useMantineTheme()
 	const [opened, setOpened] = useState(false)
 	return (
@@ -36,14 +34,18 @@ export default function AppShellDemo() {
 						hidden={!opened}
 						width={{ sm: 200, lg: 300 }}
 					>
-						<Text>Application navbar</Text>
-						<Button>Add click</Button>
+						<NavbarLinks />
 					</Navbar>
 				}
 				header={
 					<Header height={70} p="md">
 						<div
-							style={{ display: "flex", alignItems: "center", height: "100%" }}
+							style={{
+								display: "flex",
+								justifyContent: "space-between",
+								alignItems: "center",
+								height: "100%",
+							}}
 						>
 							<MediaQuery largerThan="sm" styles={{ display: "none" }}>
 								<Burger
@@ -54,18 +56,14 @@ export default function AppShellDemo() {
 									mr="xl"
 								/>
 							</MediaQuery>
-
 							<ColorModeSwitcher />
-							<Text>Resize app to see responsive navbar in action</Text>
-							<Text>Resize app to see responsive navbar in action</Text>
-							<Text>Resize app to see responsive navbar in action</Text>
 						</div>
 					</Header>
 				}
 			>
 				<Home />
-				<Text>Resize app to see responsive navbar in action</Text>
 			</AppShell>
 		</>
 	)
 }
+export default AppShellDemo

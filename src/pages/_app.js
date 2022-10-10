@@ -1,8 +1,8 @@
-import "../styles/globals.css"
 import { MantineProvider, ColorSchemeProvider } from "@mantine/core"
-import { setCookies } from "cookies-next"
+import { setCookies, getCookie } from "cookies-next"
 import { useState } from "react"
-export default function MyApp(props) {
+import { useColorScheme } from "@mantine/hooks"
+export default function App(props) {
 	const { Component, pageProps } = props
 	const [colorScheme, setColorScheme] = useState(props.colorScheme)
 	const toggleColorScheme = (value) => {
@@ -18,18 +18,13 @@ export default function MyApp(props) {
 				colorScheme={colorScheme}
 				toggleColorScheme={toggleColorScheme}
 			>
-				<MantineProvider
-					theme={{ colorScheme }}
-					withGlobalStyles
-					withNormalizeCSS
-				>
+				<MantineProvider theme={{ colorScheme }} withGlobalStyles withNormalizeCSS>
 					<Component {...pageProps} />
 				</MantineProvider>
 			</ColorSchemeProvider>
 		</>
 	)
 }
-// export default App
-// MyApp.getInitialProps = (ctx) => {
-// 	colorScheme: getCookies("mantine-color-scheme", ctx) || "n "
-// }
+App.getInitialProps = ({ ctx }) => ({
+	colorScheme: getCookie("mantine-color-scheme", ctx) || "n ",
+})
