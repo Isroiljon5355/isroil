@@ -4,13 +4,16 @@ const useStyles = createStyles((theme) => ({
     width: "50px",
     height: "50px",
     borderRadius: "50%",
-    border: "1px solid red",
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
     cursor: "pointer",
     backgroundColor: "#ec1839",
     color: "#fff",
+    "&:hover": {
+      transition: "all 0.3s",
+      transform: "scale(1.2)",
+    },
   },
   iconsBoxHeader: {
     display: "flex",
@@ -20,8 +23,9 @@ const useStyles = createStyles((theme) => ({
   homePages: {
     height: "85vh",
     display: "flex",
-    alignContent: "center",
     justifyContent: "center",
+    alignContent: "center",
+
     paddingTop: "100px",
   },
   homePageTitle: {
