@@ -1,13 +1,11 @@
 import React from "react"
-// import AppShellDemo from "../components/navbar/Navbar"
-import Layouts from "../layouts/Layouts"
+import Home from "./home"
 function index() {
-	return (
-		<>
-			{/* <AppShellDemo /> */}
-			<Layouts />
-		</>
-	)
+  return (
+    <>
+      <Home />
+    </>
+  )
 }
 
 export default index
