@@ -19,6 +19,7 @@ const useStyles = createStyles((theme) => ({
     display: "flex",
     justifyContent: "space-between",
     marginTop: "25px",
+    fontSize: "",
   },
   homePages: {
     height: "85vh",
