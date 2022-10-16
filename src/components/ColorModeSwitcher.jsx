@@ -1,9 +1,9 @@
-import React, { useState } from "react"
-import { ActionIcon, Group, useMantineColorScheme } from "@mantine/core"
-import { IconMoon, IconSun } from "@tabler/icons"
+import React from "react";
+import { ActionIcon, useMantineColorScheme } from "@mantine/core";
+import { IconMoonStars, IconSun } from "@tabler/icons";
 export function ColorModeSwitcher() {
-  const { colorScheme, toggleColorScheme } = useMantineColorScheme()
-  const dark = colorScheme === "dark"
+  const { colorScheme, toggleColorScheme } = useMantineColorScheme();
+  const dark = colorScheme === "dark";
 
   return (
     <>
@@ -13,8 +13,8 @@ export function ColorModeSwitcher() {
         onClick={() => toggleColorScheme()}
         title="Toggle color scheme"
       >
-        {dark ? <IconMoon size={18} /> : <IconMoon size={18} />}
+        {dark ? <IconSun size={18} /> : <IconMoonStars size={18} />}
       </ActionIcon>
     </>
-  )
+  );
 }
