@@ -1,8 +1,28 @@
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import { Badge, Box, NavLink, Text } from "@mantine/core";
 import { IconHome2 } from "@tabler/icons";
+import {
+  IconGauge,
+  IconFingerprint,
+  IconActivity,
+  IconChevronRight,
+} from "@tabler/icons";
+import { useRouter } from "next/router";
+const data = [
+  { id: 1, icon: IconGauge, label: "Home", link: "/" },
+  {
+    id: 2,
+    icon: IconFingerprint,
+    label: "Security",
+    link: "/abut",
+  },
+  { id: 3, icon: IconActivity, label: "Activity" },
+];
+
 function NavbarLinks() {
+  const router = useRouter();
+
   return (
     <>
       <Box
@@ -32,24 +52,26 @@ function NavbarLinks() {
             width: "100%",
           }}
         >
-          <Link
-            href="/"
-            style={{
-              textDecoration: "none !important",
-              color: "#fff",
-            }}
-          >
+          <Link href="/" passHref>
             <NavLink
-              label="With icon"
-              variant="filled"
-              active
-              icon={<IconHome2 size={16} stroke={1.5} />}
+              component="a"
+              label="Home"
+              active={router.pathname === "/"}
+              style={{
+                borderRadius: "10px",
+                marginTop: "15px",
+              }}
             />
           </Link>
-          <Link href="/about">
+          <Link href="/about" passHref>
             <NavLink
+              component="a"
               label="About"
-              icon={<IconHome2 size={16} stroke={1.5} />}
+              active={router.pathname === "/about"}
+              style={{
+                borderRadius: "10px",
+                marginTop: "15px",
+              }}
             />
           </Link>
         </Box>
