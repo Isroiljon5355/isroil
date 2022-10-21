@@ -35,6 +35,7 @@ function About() {
           doing programming for over 2 years and I have been doing front end for
           1.5 years. I can create various HTML layouts and ReactJS SPA.
         </Text>
+        <Text>add contact</Text>
       </Box>
     </Box>
   );
