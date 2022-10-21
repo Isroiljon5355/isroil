@@ -2,23 +2,8 @@ import React, { useState } from "react";
 import Link from "next/link";
 import { Badge, Box, NavLink, Text } from "@mantine/core";
 import { IconHome2 } from "@tabler/icons";
-import {
-  IconGauge,
-  IconFingerprint,
-  IconActivity,
-  IconChevronRight,
-} from "@tabler/icons";
+
 import { useRouter } from "next/router";
-const data = [
-  { id: 1, icon: IconGauge, label: "Home", link: "/" },
-  {
-    id: 2,
-    icon: IconFingerprint,
-    label: "Security",
-    link: "/abut",
-  },
-  { id: 3, icon: IconActivity, label: "Activity" },
-];
 
 function NavbarLinks() {
   const router = useRouter();
@@ -80,7 +65,7 @@ function NavbarLinks() {
             width: "100%",
           }}
         >
-          ;mkds
+          add
         </Box>
       </Box>
     </>
