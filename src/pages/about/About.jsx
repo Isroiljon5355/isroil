@@ -36,6 +36,9 @@ function About() {
           1.5 years. I can create various HTML layouts and ReactJS SPA.
         </Text>
       </Box>
+      <Box>
+        <Text></Text>
+      </Box>
     </Box>
   );
 }
