@@ -37,7 +37,8 @@ function About() {
         </Text>
       </Box>
       <Box>
-        <Text></Text>
+        <Text>salommwkds</Text>
+        <Text>sacmks</Text>
       </Box>
     </Box>
   );
