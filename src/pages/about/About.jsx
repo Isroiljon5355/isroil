@@ -33,6 +33,7 @@ function About() {
         </Text>
       </Box>
       <Box>
+        <Text>ke;do</Text>
         <Text
           weight={400}
           style={{
