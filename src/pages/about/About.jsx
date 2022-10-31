@@ -1,12 +1,5 @@
-import { Box, Button, Card, Text } from "@mantine/core";
+import { Box, Text } from "@mantine/core";
 import React from "react";
-import List from "../about/index";
-
-const prods = [
-  { id: "ds", name: "salomf" },
-  { id: "qwx", name: "saewds" },
-  { id: "pp", name: "wwq" },
-];
 
 function About() {
   return (
@@ -33,7 +26,6 @@ function About() {
         </Text>
       </Box>
       <Box>
-        <Text>ke;do</Text>
         <Text
           weight={400}
           style={{
@@ -45,24 +37,8 @@ function About() {
           1.5 years. I can create various HTML layouts and ReactJS SPA.
         </Text>
       </Box>
-      <Box>
-        <Text>salommwkds</Text>
-        <Text>sacmks</Text>
-      </Box>
-      <List items={prods} itemComponents={<Product highlighted />} />
     </Box>
   );
 }
 
 export default About;
-
-const Product = ({ id, name, highlighted }) => {
-  return (
-    <Card>
-      {highlighted && <Text>salom</Text>}
-      <Text>{name}</Text>
-      <Button>Add to Cart</Button>
-      991270628
-    </Card>
-  );
-};
