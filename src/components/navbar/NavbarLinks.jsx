@@ -1,8 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 import Link from "next/link";
-import { Badge, Box, NavLink, Text } from "@mantine/core";
-import { IconHome2 } from "@tabler/icons";
-
+import { Box, NavLink, Text } from "@mantine/core";
 import { useRouter } from "next/router";
 
 function NavbarLinks() {

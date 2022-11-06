@@ -1,5 +1,5 @@
-import React from "react"
-import { useState } from "react"
+import React from "react";
+import { useState } from "react";
 import {
   AppShell,
   Navbar,
@@ -8,12 +8,12 @@ import {
   Burger,
   useMantineTheme,
   Box,
-} from "@mantine/core"
-import NavbarLinks from "../components/navbar/NavbarLinks"
-import { ColorModeSwitcher } from "../components/ColorModeSwitcher"
+} from "@mantine/core";
+import NavbarLinks from "../components/navbar/NavbarLinks";
+import { ColorModeSwitcher } from "../components/ColorModeSwitcher";
 function AppContainer({ children }) {
-  const theme = useMantineTheme()
-  const [opened, setOpened] = useState(false)
+  const theme = useMantineTheme();
+  const [opened, setOpened] = useState(false);
   return (
     <AppShell
       styles={{
@@ -42,6 +42,7 @@ function AppContainer({ children }) {
             style={{
               display: "flex",
               justifyContent: "space-between",
+              padding: "0px 2%",
               alignItems: "center",
               height: "100%",
             }}
@@ -63,7 +64,7 @@ function AppContainer({ children }) {
     >
       {children}
     </AppShell>
-  )
+  );
 }
 
-export default AppContainer
+export default AppContainer;
