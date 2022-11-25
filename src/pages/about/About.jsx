@@ -1,4 +1,4 @@
-import { Box, Text } from "@mantine/core";
+import { Box, Text, Button } from "@mantine/core";
 import React from "react";
 
 function About() {
@@ -36,6 +36,7 @@ function About() {
           doing programming for over 2 years and I have been doing front end for
           1.5 years. I can create various HTML layouts and ReactJS SPA.
         </Text>
+        <Button>dqa</Button>
       </Box>
     </Box>
   );
